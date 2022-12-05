@@ -6,11 +6,12 @@ from qaeval_utils import parse_rel, rel2concise_str
 import sys
 sys.path.append('/Users/teddy/eclipse-workspace/entgraph_eval')
 sys.path.append('../entgraph_eval')
+sys.path.append('../utils/')
 import torch
 from sklearn.metrics import precision_recall_curve as pr_curve_sklearn
 from pytorch_lightning.metrics.functional.classification import precision_recall_curve as pr_curve_pt
 from pytorch_lightning.metrics.functional import auc
-from evaluation.util_chinese import get_auc
+from qaeval_utils import get_auc
 
 
 def compute_ss_auc(precisions: torch.FloatTensor, recalls: torch.FloatTensor,

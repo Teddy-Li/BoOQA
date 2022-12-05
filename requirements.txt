@@ -1,0 +1,10 @@
+h5py
+transformers
+nltk
+torch
+scikit-learn
+numpy
+matplotlib
+pytorch_lightning
+scipy
+psutil

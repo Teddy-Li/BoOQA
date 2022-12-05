@@ -6,7 +6,7 @@ This repository hosts the BoOQA dataset, a boolean open-domain QA dataset propos
 If you wish to replicate the results in the paper, or use the dataset for evaluating your own models, please follow the instructions below:
 
 1. Download the [Chinese WordNet](https://bond-lab.github.io/cow/) and [English](https://nlp.stanford.edu/projects/glove/) / [Chinese](https://github.com/Embedding/Chinese-Word-Vectors) word embeddings from their respective pages;
-2. For English, download the data package from [here](); for Chinese, download the data from [here]();
+2. For English, download the data package from [here](); for Chinese, download the data from [here](https://uoe-my.sharepoint.com/:u:/g/personal/s2063487_ed_ac_uk/EcAnyjRD8K5KoFo6qaxJ8xYBE-ZwBWEIyOy5ow8DLHNZOg?e=iY6jYh);
 3. Unzip the downloaded files and place the unzipped folders in the root directory;
 4. Run `pip install -r requirements.txt` to install the required packages;
 5. Follow instructions in the `evaluation` section below to evaluate your models.
