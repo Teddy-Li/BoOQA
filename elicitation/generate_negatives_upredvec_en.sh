@@ -19,11 +19,12 @@ version=$1
 global_presence=$2
 
 python -u generate_negatives.py --do_compute_upred_vecs --positives_base nc_positives_%s_%s.json \
---negatives_base nc_negatives_%s_%d_%s_%s.json --potential_positives_path ./nc_time_slices/nc_potential_positives_%s_%s.json \
---potential_negatives_path ./nc_time_slices/nc_potential_negatives_%s_%d_%s_%s.json --time_interval 3 --version "$version" \
---which_positives XXX --global_presence "$global_presence" --wordnet_dir XXX --word2vec_path glove.840B.300d.txt \
---all_triples_path ../news_genC_GG_typed.json --partition_triples_path ./nc_time_slices/nc_typed_triples_%s_%s.json \
---triple_set_path ./nc_all_triple_set.json --pred_set_path ./nc_all_pred_set.json --pred_vectors_path ./nc_triple_vectors.h5 \
+--negatives_base nc_negatives_%s_%d_%s_%s.json --potential_positives_path ../nc_time_slices/nc_potential_positives_%s_%s.json \
+--potential_negatives_path ../nc_time_slices/nc_potential_negatives_%s_%d_%s_%s.json --time_interval 3 --version "$version" \
+--which_positives XXX --global_presence "$global_presence" --wordnet_dir XXX --word2vec_path ../nc_aux_data/glove.840B.300d.txt \
+--all_triples_path ../../news_genC_GG_typed.json --partition_triples_path ../nc_time_slices/nc_typed_triples_%s_%s.json \
+--triple_set_path ../nc_inter_data/nc_all_triple_set.json --pred_set_path ../nc_inter_data/nc_all_pred_set.json \
+--pred_vectors_path ../nc_inter_data/nc_triple_vectors.h5 \
 --pred_vectors_cache_size 300000 --global_presence_thres 3 --only_negable_pos_flag \
 --wn_only_entries_flag --neg_source wordnet --final_samples_base_fn nc_final_samples_%s_%d_%d_%d_%s_%s_%s.json --lang en \
 --wsd_model_dir /disk/scratch_big/tli/BERT-WSD/model/bert_base-augmented-batch_size=64-lr=2e-5-max_gloss=4 \

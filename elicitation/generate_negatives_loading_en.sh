@@ -19,8 +19,9 @@
 global_presence=$1
 flag1=$2  # could be ``--global_triple_absence_flag''
 
-python -u generate_negatives.py --do_load_triples --all_triples_path ../news_genC_GG_typed.json --global_presence "${global_presence}" \
---triple_set_path ./nc_all_triple_set.json --pred_set_path ./nc_all_pred_set.json --lang en ${flag1}
+python -u generate_negatives.py --do_load_triples --all_triples_path ../../news_genC_GG_typed.json \
+--global_presence "${global_presence}" --triple_set_path ../nc_inter_data/nc_all_triple_set.json \
+--pred_set_path ../nc_inter_data/nc_all_pred_set.json --lang en ${flag1}
 
 #ls -l
 #cp -v ./clue_all_triple_set.json /home/s2063487/QAEval/

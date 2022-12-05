@@ -1572,10 +1572,10 @@ if __name__ == '__main__':
 						help='two variables: version name; [dev/test]')
 	parser.add_argument('--negatives_base', default='clue_negatives_%s_%d_%d_%s_%s.json', type=str,
 						help='three variables: version name; [wordnet/word2vec]; [dev/test]')
-	parser.add_argument('--potential_positives_path', default='./clue_time_slices/clue_potential_positives_%s_%s.json',
+	parser.add_argument('--potential_positives_path', default='../clue_time_slices/clue_potential_positives_%s_%s.json',
 						type=str)
 	parser.add_argument('--potential_negatives_path',
-						default='./clue_time_slices/clue_potential_negatives_%s_%d_%d_%s_%s.json', type=str)
+						default='../clue_time_slices/clue_potential_negatives_%s_%d_%d_%s_%s.json', type=str)
 	parser.add_argument('--time_interval', default=3, type=int)
 	parser.add_argument('--version', default='5_10_triple_doc_100_disjoint', type=str)
 	parser.add_argument('--do_load_triples', action='store_true')
@@ -1598,15 +1598,15 @@ if __name__ == '__main__':
 	parser.add_argument('--firstonly', action='store_true',
 						help='whether to use only the first synsets of an WordNet entry, useful only for the WordNet setting.')
 	parser.add_argument('--wsd_model_dir', default='', type=str)
-	parser.add_argument('--wordnet_dir', default='/Users/teddy/Downloads/cow/wn-cmn-lmf.xml', type=str)
-	parser.add_argument('--word2vec_path', default='./sgns.merge.char', type=str)
+	parser.add_argument('--wordnet_dir', default='../generic_aux_data/wn-cmn-lmf.xml', type=str)
+	parser.add_argument('--word2vec_path', default='../generic_aux_data/sgns.merge.char', type=str)
 	parser.add_argument('--wsd_batch_size', default=32, type=int)
-	parser.add_argument('--all_triples_path', default='../clue_typed_triples_tacl.json', type=str)
-	parser.add_argument('--partition_triples_path', default='./clue_time_slices/clue_typed_triples_%s_%s.json',
+	parser.add_argument('--all_triples_path', default='../../clue_typed_triples_tacl.json', type=str)
+	parser.add_argument('--partition_triples_path', default='../clue_time_slices/clue_typed_triples_%s_%s.json',
 						type=str)
-	parser.add_argument('--triple_set_path', default='./clue_all_triple_set.json', type=str)
-	parser.add_argument('--pred_set_path', default='./clue_all_pred_set.json', type=str)
-	parser.add_argument('--pred_vectors_path', default='./clue_triple_vectors.h5', type=str)
+	parser.add_argument('--triple_set_path', default='../clue_inter_data/clue_all_triple_set.json', type=str)
+	parser.add_argument('--pred_set_path', default='../clue_inter_data/clue_all_pred_set.json', type=str)
+	parser.add_argument('--pred_vectors_path', default='../clue_inter_data/clue_triple_vectors.h5', type=str)
 	parser.add_argument('--pred_vectors_cache_size', default=300000, type=int)
 	parser.add_argument('--max_num_lines', default=-1, type=int)
 	parser.add_argument('--global_presence_thres', default=5, type=int)
