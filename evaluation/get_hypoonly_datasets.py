@@ -6,7 +6,7 @@ from qaeval_utils import parse_rel, upred2bow, reconstruct_sent_from_rel
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--input_fn', type=str, default='./nc_final_samples_15_30_triple_doc_disjoint_5_40000_2_lexic_wordnet_%s.json')
+parser.add_argument('--input_fn', type=str, default='../nc_data/nc_final_samples_15_30_triple_doc_disjoint_5_40000_2_lexic_wordnet_%s.json')
 parser.add_argument('--train_num_posis', type=int, default=1600)  #default=1600)
 parser.add_argument('--dev_num_posis', type=int, default=400)  #default=400)
 parser.add_argument('--output_fn', type=str, default='/Users/teddy/PycharmProjects/multilingual-lexical-inference/datasets/data_qaeval_15_30_5/hypoonly_typearg_lhsize/%s.txt')
