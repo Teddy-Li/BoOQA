@@ -48,6 +48,24 @@ Use `select_positives_en_generic.sh` or `select_positives_zh_generic.sh`
     4. Generating Word2Vec Negatives: ``
     5. Sampling: ``
 
+## Data Format
+
+{
+
+"r": relation tuple: (predicate::subject::object::XX::XX::XX::subj_type::obj_type),
+
+"partition_key": time slice key in the corpus, YYYY_STARTMM-STARTDD_ENDMM-ENDD,
+
+"in_partition_sidx": sentence index within the time slice,
+
+"wn_synsets": list of WordNet synsets for the concrete words of the predicate,
+
+"label": "true" if this hypothesis is correct, "false" otherwise,
+
+"proposition": the natural language phrase from which this hypothesis is extracted,
+
+}
+
 ## Evaluation
 * EN
     1. Go to entgraph_eval/evaluation
